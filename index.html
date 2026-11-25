@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" style="color-scheme: light;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fondos · Buzios 27</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1b16;--mute:#7a756a;--line:#e4dfd3;--acc:#d9480f;--accbg:#fff0e6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16150f;--card:#211f17;--ink:#f2eee3;--mute:#9a9484;--line:#38342a;--acc:#ff8a4c;--accbg:#33241a}}
+:root[data-theme="dark"]{--bg:#16150f;--card:#211f17;--ink:#f2eee3;--mute:#9a9484;--line:#38342a;--acc:#ff8a4c;--accbg:#33241a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:26px;margin:0 0 2px;letter-spacing:-.02em}
+.sub{color:var(--mute);font-size:14px;margin-bottom:16px}
+.tot{display:flex;gap:10px;margin-bottom:16px}
+.tot div{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.tot b{display:block;font-size:24px;color:var(--acc)}
+.tot span{font-size:12px;color:var(--mute)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.tab{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;font-family:inherit}
+.tab.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.tab i{font-style:normal;opacity:.8;margin-left:6px;font-weight:700}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:6px}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.head h2{margin:0;font-size:22px}
+.big{font-size:34px;font-weight:800;color:var(--acc)}
+.fondo{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
+.fondo .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--accbg);color:var(--acc);font-size:12px;font-weight:700;display:grid;place-items:center}
+.fondo p{margin:0;flex:1;font-size:15px;line-height:1.35}
+.fondo.void p{text-decoration:line-through;color:var(--mute)}
+.fondo.void .n{background:var(--line);color:var(--mute)}
+.btns{display:flex;gap:4px;flex:none}
+.ib{border:1px solid var(--line);background:transparent;color:var(--mute);border-radius:8px;font-size:12px;padding:4px 8px;cursor:pointer;font-family:inherit}
+.ib.warn{border-color:var(--acc);color:var(--acc)}
+.empty{color:var(--mute);font-size:14px;padding:12px 0}
+.add{display:flex;gap:8px;margin-top:12px}
+input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:10px 12px;font-size:15px;font-family:inherit}
+.go{border:0;background:var(--acc);color:#fff;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer;font-family:inherit}
+.newp{margin-top:18px}
+.note{margin-top:14px;font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<main>
+<h1>🍻 Fondos · Buzios 27</h1>
+<div class="sub">Cada fondo necesita su motivo. Sin motivo, no hay fondo.</div>
+<div class="tot"><div><b id="tf">20</b><span>fondos totales</span></div><div><b id="tp">9</b><span>con deuda</span></div><div><b id="lead">Ponzio</b><span>va puntero</span></div></div>
+<div class="tabs" id="tabs"></div>
+<div id="panel"></div>
+<div class="add newp"><input id="np" placeholder="Sumar a alguien a la lista" maxlength="30"><button class="go" id="npb">Sumar</button></div>
+<div class="note" id="note">Actualizado al 2/10</div>
+</main>
+<script id="state" type="application/json">{"people": [{"n": "Ponzio", "f": [{"r": "Paga tarde"}, {"r": "Quemador"}, {"r": "Bardea a jugadores activos 04"}, {"r": "Tira tragos de la 04"}, {"r": "Acumulación de mensajes erróneos (fondo por votación)"}, {"r": "Falta a Don Bosco"}, {"r": "Cuq"}, {"r": "Decir que Geba es un CLUB GRANDE"}]}, {"n": "Ordoñez", "f": [{"r": "Le dio paja ayudar al grupo"}, {"r": "Se va del 3T al cine"}, {"r": "Sticker innecesario"}, {"r": "Somete a encuesta"}, {"r": "Bardea a jugadores 04"}, {"r": "Asume una tarea y la deja a medias"}, {"r": "Nombra a 🤚"}]}, {"n": "Toto", "f": [{"r": "Propone lista, previamente propuesta por un miembro"}, {"r": "Nombra a 🤚"}, {"r": "Falta al Seven"}, {"r": "Nombra a 🤚"}]}, {"n": "Simo", "f": [{"r": "Primer viaje"}, {"r": "Voluntad propia"}, {"r": "Nombra a 🤚"}, {"r": "Nombra a 🤚"}]}, {"n": "Lucher", "f": [{"r": "Falta a San Martín"}, {"r": "Falta AL CLUB"}, {"r": "Por grasa"}, {"r": "Vota fuera de término"}, {"r": "Falta lunes feriado"}, {"r": "Falta al 3T por un cumple"}, {"r": "Falta toda la semana de play off"}, {"r": "TOP 3 ausencias"}, {"r": "Falta a las semis"}]}, {"n": "Marini", "f": [{"r": "Falta a San Martín"}, {"r": "Falta AL CLUB"}, {"r": "Car"}, {"r": "Cuq forro hdp"}, {"r": "Falta a Banco"}, {"r": "Vota fuera de término"}, {"r": "Falta lunes feriado"}, {"r": "Falta toda la semana de play off"}, {"r": "TOP 3 ausencias"}]}, {"n": "Botta", "f": [{"r": "Falta"}, {"r": "Anécdota floja sobre Samper y Buda"}, {"r": "Vota fuera de término"}, {"r": "Falta lunes feriado"}, {"r": "Falta a Banco"}, {"r": "Falta toda la semana de play off"}]}, {"n": "Lutter", "f": [{"r": "Pifia y manda la lista a cualquier grupo"}, {"r": "Se ausenta por una despedida"}, {"r": "Aubameyang"}, {"r": "Opinar de un TikTok sin verlo"}, {"r": "Mal sumado fondo a Marini"}, {"r": "Modifica jodiendo la lista de fondos"}, {"r": "Abandona el grupo"}, {"r": "Abandona el grupo"}, {"r": "Nombra a 🤚"}, {"r": "Nombra a 🤚"}]}, {"n": "Guido", "f": [{"r": "Pierde discusión por zapatillas deportivas"}, {"r": "Usa la encuesta mal mandada"}, {"r": "Nombra a ✋🏽"}, {"r": "Nombra a 🤚"}]}, {"n": "Iñaki", "f": [{"r": "Vota fuera de término"}]}, {"n": "Rodri", "f": [{"r": "Falta a Italiano"}, {"r": "TOP 3 ausencias"}, {"r": "Falta a las semis"}, {"r": "Fondo Wilko"}]}], "upd": "24/11"}</script>
+<script>
+(function(){
+var S=JSON.parse(document.getElementById('state').textContent);
+var sel=0;try{sel=+localStorage.getItem('fb27sel')||0}catch(e){}
+if(sel>=S.people.length)sel=0;
+var art=null,timer=null,armed=null,canEdit=false;
+var $=function(id){return document.getElementById(id)};
+function cnt(p){return p.f.filter(function(x){return !x.v}).length}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function save(){
+  S.upd=new Date().toLocaleDateString('es-AR',{day:'numeric',month:'numeric'});
+  render();
+  if(!art||!canEdit)return;
+  clearTimeout(timer);
+  timer=setTimeout(function(){
+    var c=document.documentElement.cloneNode(true);c.removeAttribute('data-theme');c.removeAttribute('style');
+    c.querySelector('#state').textContent=JSON.stringify(S);
+    c.querySelector('#tabs').innerHTML='';c.querySelector('#panel').innerHTML='';
+    art.publish('<!DOCTYPE html>\n'+c.outerHTML).catch(function(e){$('note').textContent='No se pudo guardar ('+(e&&e.code||'error')+').'});
+  },700);
+}
+function render(){
+  document.querySelector('.newp').style.display=canEdit?'flex':'none';
+  var tot=0,deb=0,max=0,lead='-';
+  S.people.forEach(function(p){var c=cnt(p);tot+=c;if(c)deb++;if(c>max){max=c;lead=p.n}});
+  $('tf').textContent=tot;$('tp').textContent=deb;$('lead').textContent=lead;
+  var tabs=$('tabs');tabs.innerHTML='';
+  S.people.forEach(function(p,i){
+    var b=el('button','tab'+(i===sel?' on':''),p.n);
+    b.appendChild(el('i',null,'x'+cnt(p)));
+    b.onclick=function(){sel=i;try{localStorage.setItem('fb27sel',i)}catch(e){};armed=null;render()};
+    tabs.appendChild(b);
+  });
+  var p=S.people[sel],pn=$('panel');pn.innerHTML='';
+  if(!p)return;
+  var d=el('div','panel'),h=el('div','head');
+  h.appendChild(el('h2',null,p.n));h.appendChild(el('div','big','x'+cnt(p)));d.appendChild(h);
+  if(!p.f.length)d.appendChild(el('div','empty','Limpio por ahora. Todo llega.'));
+  p.f.forEach(function(f,i){
+    var r=el('div','fondo'+(f.v?' void':''));
+    r.appendChild(el('div','n',i+1));
+    r.appendChild(el('p',null,f.r));
+    var bs=el('div','btns'),v=el('button','ib',f.v?'Contar':'No cuenta');
+    v.onclick=function(){f.v=f.v?0:1;save()};
+    var x=el('button','ib'+(armed===i?' warn':''),armed===i?'¿Seguro?':'✕');
+    x.onclick=function(){if(armed===i){p.f.splice(i,1);armed=null;save()}else{armed=i;render()}};
+    if(canEdit){bs.appendChild(v);bs.appendChild(x);r.appendChild(bs)}d.appendChild(r);
+  });
+  var a=el('div','add'),inp=el('input');inp.placeholder=canEdit?'Motivo del fondo (obligatorio)':'Proponé un fondo para '+p.n+' (con motivo)';inp.maxLength=140;
+  var g=el('button','go',canEdit?'+ Fondo':'Proponer');
+  var add=function(){var t=inp.value.trim();if(!t)return;
+    if(canEdit){p.f.push({r:t});armed=null;save();return}
+    var m='🍻 Propongo fondo para '+p.n+': '+t,w=window.open('https://wa.me/?text='+encodeURIComponent(m),'_blank');
+    if(!w)$('note').textContent='Copiá y mandá esto al grupo: '+m;else inp.value=''};
+  g.onclick=add;inp.onkeydown=function(e){if(e.key==='Enter')add()};
+  a.appendChild(inp);a.appendChild(g);d.appendChild(a);
+  if(canEdit&&p.f.length===0){var rm=el('button','ib','Sacar de la lista');rm.style.marginTop='12px';rm.onclick=function(){S.people.splice(sel,1);sel=0;save()};d.appendChild(rm)}
+  pn.appendChild(d);
+  $('note').textContent='Actualizado al '+S.upd+(canEdit?'':' · Los fondos los carga el admin: proponé uno y se manda al grupo.');
+}
+function addP(){var t=$('np').value.trim();if(!t)return;S.people.push({n:t,f:[]});sel=S.people.length-1;$('np').value='';save()}
+$('npb').onclick=addP;$('np').onkeydown=function(e){if(e.key==='Enter')addP()};
+render();
+if(window.claude&&claude.use)Promise.all([claude.use('artifact'),claude.use('user')]).then(function(r){art=r[0];var u=r[1];canEdit=!!art&&(u?!!u.canEdit():true);render()}).catch(function(){});
+})();
+</script>
+
+
+</body></html>
